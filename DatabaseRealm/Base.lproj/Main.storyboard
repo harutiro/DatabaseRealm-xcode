@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dD2-t6-AZW">
-                                <rect key="frame" x="143" y="269" width="128" height="34"/>
+                                <rect key="frame" x="143" y="269" width="114.5" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="WGm-Dd-XZ7"/>
                                 </constraints>
@@ -25,7 +25,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="content" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBQ-dm-tnu">
-                                <rect key="frame" x="143" y="431" width="128" height="34"/>
+                                <rect key="frame" x="136.5" y="431" width="128" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="ONX-U9-py8"/>
                                 </constraints>
@@ -33,17 +33,20 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeZ-Kn-1Oj">
-                                <rect key="frame" x="173.5" y="593" width="67" height="31"/>
+                                <rect key="frame" x="173.5" y="593" width="53.5" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="X4w-Qj-L0Z"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                <buttonConfiguration key="configuration" style="plain" title="save">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="save" destination="BYZ-38-t0r" eventType="touchUpInside" id="qKu-6C-kq1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -61,6 +64,10 @@
                             <constraint firstItem="jeZ-Kn-1Oj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xjp-L8-MlU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentTextField" destination="BBQ-dm-tnu" id="0K2-jR-LeW"/>
+                        <outlet property="titleTextField" destination="dD2-t6-AZW" id="YQW-aD-rMB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
