@@ -1,7 +1,7 @@
-// MARK: - Mocks generated from file: DatabaseRealm/ViewModel/MainViewModel.swift at 2023-06-12 12:56:46 +0000
+// MARK: - Mocks generated from file: DatabaseRealm/Model/RealmDBModel.swift at 2023-06-12 14:21:11 +0000
 
 //
-//  MainViewModel.swift
+//  RealmDBModel.swift
 //  DatabaseRealm
 //
 //  Created by Owner on 2023/06/12.
@@ -17,51 +17,25 @@ import RealmSwift
 
 
 
- class MockMainViewModel: MainViewModel, Cuckoo.ClassMock {
+ class MockRealmDBModel: RealmDBModel, Cuckoo.ClassMock {
     
-     typealias MocksType = MainViewModel
+     typealias MocksType = RealmDBModel
     
-     typealias Stubbing = __StubbingProxy_MainViewModel
-     typealias Verification = __VerificationProxy_MainViewModel
+     typealias Stubbing = __StubbingProxy_RealmDBModel
+     typealias Verification = __VerificationProxy_RealmDBModel
 
      let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: true)
 
     
-    private var __defaultImplStub: MainViewModel?
+    private var __defaultImplStub: RealmDBModel?
 
-     func enableDefaultImplementation(_ stub: MainViewModel) {
+     func enableDefaultImplementation(_ stub: RealmDBModel) {
         __defaultImplStub = stub
         cuckoo_manager.enableDefaultStubImplementation()
     }
     
 
     
-    
-    
-    
-    public override var tableData: Results<Memo>? {
-        get {
-            return cuckoo_manager.getter("tableData",
-                superclassCall:
-                    
-                                    super.tableData
-                    ,
-                defaultCall:  __defaultImplStub!.tableData)
-        }
-        
-        set {
-            cuckoo_manager.setter("tableData",
-                value: newValue,
-                superclassCall:
-                    
-                    super.tableData = newValue
-                    ,
-                defaultCall: __defaultImplStub!.tableData = newValue)
-        }
-        
-    }
-    
-    
 
     
 
@@ -69,19 +43,39 @@ import RealmSwift
     
     
     
-     override func loadData()  {
+     override func read() -> Memo? {
         
     return cuckoo_manager.call(
     """
-    loadData()
+    read() -> Memo?
     """,
             parameters: (),
             escapingParameters: (),
             superclassCall:
                 
-                super.loadData()
+                super.read()
                 ,
-            defaultCall: __defaultImplStub!.loadData())
+            defaultCall: __defaultImplStub!.read())
+        
+    }
+    
+    
+    
+    
+    
+     override func readAll() -> Results<Memo> {
+        
+    return cuckoo_manager.call(
+    """
+    readAll() -> Results<Memo>
+    """,
+            parameters: (),
+            escapingParameters: (),
+            superclassCall:
+                
+                super.readAll()
+                ,
+            defaultCall: __defaultImplStub!.readAll())
         
     }
     
@@ -111,7 +105,7 @@ import RealmSwift
     
     
 
-     struct __StubbingProxy_MainViewModel: Cuckoo.StubbingProxy {
+     struct __StubbingProxy_RealmDBModel: Cuckoo.StubbingProxy {
         private let cuckoo_manager: Cuckoo.MockManager
     
          init(manager: Cuckoo.MockManager) {
@@ -120,19 +114,23 @@ import RealmSwift
         
         
         
-        var tableData: Cuckoo.ClassToBeStubbedOptionalProperty<MockMainViewModel, Results<Memo>> {
-            return .init(manager: cuckoo_manager, name: "tableData")
+        
+        func read() -> Cuckoo.ClassStubFunction<(), Memo?> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockRealmDBModel.self, method:
+    """
+    read() -> Memo?
+    """, parameterMatchers: matchers))
         }
         
         
         
         
-        
-        func loadData() -> Cuckoo.ClassStubNoReturnFunction<()> {
+        func readAll() -> Cuckoo.ClassStubFunction<(), Results<Memo>> {
             let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-            return .init(stub: cuckoo_manager.createStub(for: MockMainViewModel.self, method:
+            return .init(stub: cuckoo_manager.createStub(for: MockRealmDBModel.self, method:
     """
-    loadData()
+    readAll() -> Results<Memo>
     """, parameterMatchers: matchers))
         }
         
@@ -141,7 +139,7 @@ import RealmSwift
         
         func create<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable, M4: Cuckoo.Matchable>(title: M1, content: M2, sucsess: M3, failed: M4) -> Cuckoo.ClassStubNoReturnFunction<(String, String, () -> Void, () -> Void)> where M1.MatchedType == String, M2.MatchedType == String, M3.MatchedType == () -> Void, M4.MatchedType == () -> Void {
             let matchers: [Cuckoo.ParameterMatcher<(String, String, () -> Void, () -> Void)>] = [wrap(matchable: title) { $0.0 }, wrap(matchable: content) { $0.1 }, wrap(matchable: sucsess) { $0.2 }, wrap(matchable: failed) { $0.3 }]
-            return .init(stub: cuckoo_manager.createStub(for: MockMainViewModel.self, method:
+            return .init(stub: cuckoo_manager.createStub(for: MockRealmDBModel.self, method:
     """
     create(title: String, content: String, sucsess: () -> Void, failed: () -> Void)
     """, parameterMatchers: matchers))
@@ -150,7 +148,7 @@ import RealmSwift
         
     }
 
-     struct __VerificationProxy_MainViewModel: Cuckoo.VerificationProxy {
+     struct __VerificationProxy_RealmDBModel: Cuckoo.VerificationProxy {
         private let cuckoo_manager: Cuckoo.MockManager
         private let callMatcher: Cuckoo.CallMatcher
         private let sourceLocation: Cuckoo.SourceLocation
@@ -162,23 +160,28 @@ import RealmSwift
         }
     
         
-        
-        
-        var tableData: Cuckoo.VerifyOptionalProperty<Results<Memo>> {
-            return .init(manager: cuckoo_manager, name: "tableData", callMatcher: callMatcher, sourceLocation: sourceLocation)
-        }
-        
-        
     
         
         
         
         @discardableResult
-        func loadData() -> Cuckoo.__DoNotUse<(), Void> {
+        func read() -> Cuckoo.__DoNotUse<(), Memo?> {
             let matchers: [Cuckoo.ParameterMatcher<Void>] = []
             return cuckoo_manager.verify(
     """
-    loadData()
+    read() -> Memo?
+    """, callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+        
+        
+        
+        
+        @discardableResult
+        func readAll() -> Cuckoo.__DoNotUse<(), Results<Memo>> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify(
+    """
+    readAll() -> Results<Memo>
     """, callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
         
@@ -199,30 +202,25 @@ import RealmSwift
 }
 
 
- class MainViewModelStub: MainViewModel {
+ class RealmDBModelStub: RealmDBModel {
+    
+
+    
+
     
     
     
     
-    public override var tableData: Results<Memo>? {
-        get {
-            return DefaultValueRegistry.defaultValue(for: (Results<Memo>?).self)
-        }
-        
-        set { }
-        
+     override func read() -> Memo?  {
+        return DefaultValueRegistry.defaultValue(for: (Memo?).self)
     }
     
     
-
-    
-
     
     
     
-    
-     override func loadData()   {
-        return DefaultValueRegistry.defaultValue(for: (Void).self)
+     override func readAll() -> Results<Memo>  {
+        return DefaultValueRegistry.defaultValue(for: (Results<Memo>).self)
     }
     
     

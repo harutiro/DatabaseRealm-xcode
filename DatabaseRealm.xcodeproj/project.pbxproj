@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A9861BFE53FA09B65DC991 /* Pods_DatabaseRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F66430699DEE804193B689 /* Pods_DatabaseRealm.framework */; };
 		363D2F24991A3B26400F4319 /* Pods_DatabaseRealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ED3A255B7A120B704EC86E /* Pods_DatabaseRealmTests.framework */; };
-		C25DD1ABAC91201A5EF59437 /* Pods_DatabaseRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F66430699DEE804193B689 /* Pods_DatabaseRealm.framework */; };
 		C42DF05E2A371BB3001D49EB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DF05D2A371BB3001D49EB /* MainViewModel.swift */; };
 		C42DF0602A371C31001D49EB /* RealmDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DF05F2A371C31001D49EB /* RealmDBModel.swift */; };
 		C4E267142A3748C2005C039E /* DatabaseRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E267132A3748C2005C039E /* DatabaseRealmTests.swift */; };
 		C4EF46D02A374D6900D4E9DE /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF46CF2A374D6900D4E9DE /* GeneratedMocks.swift */; };
+		C4EF46D32A37605700D4E9DE /* MainViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF46D22A37605700D4E9DE /* MainViewModelTest.swift */; };
+		C4EF46D52A37625100D4E9DE /* MemoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF46D42A37625100D4E9DE /* MemoStruct.swift */; };
+		C4EF46D62A3762D200D4E9DE /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39C627795D43000A91DD /* Memo.swift */; };
 		EB6D39AE277956C3000A91DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39AD277956C3000A91DD /* AppDelegate.swift */; };
 		EB6D39B0277956C3000A91DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39AF277956C3000A91DD /* SceneDelegate.swift */; };
 		EB6D39B2277956C3000A91DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39B1277956C3000A91DD /* ViewController.swift */; };
 		EB6D39B5277956C3000A91DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6D39B3277956C3000A91DD /* Main.storyboard */; };
 		EB6D39B7277956C5000A91DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB6D39B6277956C5000A91DD /* Assets.xcassets */; };
 		EB6D39BA277956C5000A91DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6D39B8277956C5000A91DD /* LaunchScreen.storyboard */; };
-		EB6D39C327795911000A91DD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EB6D39C227795911000A91DD /* Realm */; };
-		EB6D39C527795911000A91DD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EB6D39C427795911000A91DD /* RealmSwift */; };
 		EB6D39C727795D43000A91DD /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39C627795D43000A91DD /* Memo.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		C4E267112A3748C2005C039E /* DatabaseRealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatabaseRealmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E267132A3748C2005C039E /* DatabaseRealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRealmTests.swift; sourceTree = "<group>"; };
 		C4EF46CF2A374D6900D4E9DE /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		C4EF46D22A37605700D4E9DE /* MainViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTest.swift; sourceTree = "<group>"; };
+		C4EF46D42A37625100D4E9DE /* MemoStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStruct.swift; sourceTree = "<group>"; };
 		C6F42044BE4C4D50CEB86112 /* Pods-DatabaseRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseRealm.release.xcconfig"; path = "Target Support Files/Pods-DatabaseRealm/Pods-DatabaseRealm.release.xcconfig"; sourceTree = "<group>"; };
 		DA9734AD385AAC6B877D348C /* Pods-DatabaseRealmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseRealmTests.debug.xcconfig"; path = "Target Support Files/Pods-DatabaseRealmTests/Pods-DatabaseRealmTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB6D39AA277956C3000A91DD /* DatabaseRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatabaseRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,9 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB6D39C527795911000A91DD /* RealmSwift in Frameworks */,
-				EB6D39C327795911000A91DD /* Realm in Frameworks */,
-				C25DD1ABAC91201A5EF59437 /* Pods_DatabaseRealm.framework in Frameworks */,
+				00A9861BFE53FA09B65DC991 /* Pods_DatabaseRealm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +96,7 @@
 			children = (
 				EB6D39C627795D43000A91DD /* Memo.swift */,
 				C42DF05F2A371C31001D49EB /* RealmDBModel.swift */,
+				C4EF46D42A37625100D4E9DE /* MemoStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,10 +121,19 @@
 		C4E267122A3748C2005C039E /* DatabaseRealmTests */ = {
 			isa = PBXGroup;
 			children = (
+				C4EF46D12A37603700D4E9DE /* ViewModel */,
 				C4E267132A3748C2005C039E /* DatabaseRealmTests.swift */,
 				C4EF46CF2A374D6900D4E9DE /* GeneratedMocks.swift */,
 			);
 			path = DatabaseRealmTests;
+			sourceTree = "<group>";
+		};
+		C4EF46D12A37603700D4E9DE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C4EF46D22A37605700D4E9DE /* MainViewModelTest.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EB6D39A1277956C3000A91DD = {
@@ -176,8 +187,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4E267192A3748C2005C039E /* Build configuration list for PBXNativeTarget "DatabaseRealmTests" */;
 			buildPhases = (
-				C4EF46CE2A374CBD00D4E9DE /* ShellScript */,
 				5F08F5C66D542042E656196F /* [CP] Check Pods Manifest.lock */,
+				C4EF46CE2A374CBD00D4E9DE /* ShellScript */,
 				C4E2670D2A3748C2005C039E /* Sources */,
 				C4E2670E2A3748C2005C039E /* Frameworks */,
 				C4E2670F2A3748C2005C039E /* Resources */,
@@ -201,16 +212,13 @@
 				EB6D39A6277956C3000A91DD /* Sources */,
 				EB6D39A7277956C3000A91DD /* Frameworks */,
 				EB6D39A8277956C3000A91DD /* Resources */,
+				FDD134DA390E65B790F71279 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DatabaseRealm;
-			packageProductDependencies = (
-				EB6D39C227795911000A91DD /* Realm */,
-				EB6D39C427795911000A91DD /* RealmSwift */,
-			);
 			productName = DatabaseRealm;
 			productReference = EB6D39AA277956C3000A91DD /* DatabaseRealm.app */;
 			productType = "com.apple.product-type.application";
@@ -336,7 +344,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Define output file. Change \"$PROJECT_DIR/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/ViewModel/MainViewModel.swift\" \\\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Define output file. Change \"$PROJECT_DIR/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Model/RealmDBModel.swift\" \\\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 		E97AA328DFF5C2B3C72E5817 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -355,6 +363,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DatabaseRealmTests/Pods-DatabaseRealmTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FDD134DA390E65B790F71279 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatabaseRealm/Pods-DatabaseRealm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatabaseRealm/Pods-DatabaseRealm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DatabaseRealm/Pods-DatabaseRealm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -363,7 +388,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E267142A3748C2005C039E /* DatabaseRealmTests.swift in Sources */,
+				C4EF46D32A37605700D4E9DE /* MainViewModelTest.swift in Sources */,
 				C4EF46D02A374D6900D4E9DE /* GeneratedMocks.swift in Sources */,
+				C4EF46D62A3762D200D4E9DE /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +404,7 @@
 				C42DF0602A371C31001D49EB /* RealmDBModel.swift in Sources */,
 				EB6D39B0277956C3000A91DD /* SceneDelegate.swift in Sources */,
 				EB6D39C727795D43000A91DD /* Memo.swift in Sources */,
+				C4EF46D52A37625100D4E9DE /* MemoStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,19 +696,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EB6D39C227795911000A91DD /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EB6D39C127795911000A91DD /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-		EB6D39C427795911000A91DD /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EB6D39C127795911000A91DD /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EB6D39A2277956C3000A91DD /* Project object */;
 }

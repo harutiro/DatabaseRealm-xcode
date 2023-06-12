@@ -6,6 +6,7 @@ target 'DatabaseRealm' do
   use_frameworks!
 
   # Pods for DatabaseRealm
+  pod "RealmSwift"
 
   target 'DatabaseRealmTests' do
     inherit! :search_paths

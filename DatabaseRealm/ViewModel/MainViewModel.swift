@@ -9,7 +9,12 @@ import RealmSwift
 
 class MainViewModel{
     
-    private let realmDBModel = RealmDBModel()
+    
+    private let realmDBModel : RealmDBModel
+
+    init(realmDBModel:RealmDBModel = RealmDBModel()) {
+        self.realmDBModel = realmDBModel
+    }
     
     public var tableData : Results<Memo>? = nil
     
