@@ -36,13 +36,16 @@ class ViewController: UIViewController {
    
     
     @IBAction func save(){
+        // データの取得
         let title:String = titleTextField.text!
         let content:String = contentTextField.text!
         
+        // DBに保存する
         mainViewModel.create(
             title:title,
             content:content ,
             sucsess:{
+                //成功した時
                 let alert:UIAlertController = UIAlertController(title:"成功",message:"保存しました",preferredStyle: .alert)
                 alert.addAction(
                     UIAlertAction(title:"OK",style:.default,handler: nil)
@@ -51,6 +54,7 @@ class ViewController: UIViewController {
                 present(alert,animated:true,completion:nil)
             },
             failed:{
+                //失敗した時
                 let alert:UIAlertController = UIAlertController(title:"失敗",message:"しばらくしてから保存してください。",preferredStyle: .alert)
                 alert.addAction(
                     UIAlertAction(title:"OK",style:.default,handler: nil)
@@ -60,7 +64,9 @@ class ViewController: UIViewController {
             }
         )
         
+        // データをリロードする
         mainViewModel.loadData()
+        // リストを再表示させる。
         tableView.reloadData()
     }
 }

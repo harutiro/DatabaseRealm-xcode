@@ -2,7 +2,7 @@
 //  RealmDBModel.swift
 //  DatabaseRealm
 //
-//  Created by haruto.makino on 2023/06/12.
+//  Created by Owner on 2023/06/12.
 //
 
 import RealmSwift
