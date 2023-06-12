@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42DF05E2A371BB3001D49EB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DF05D2A371BB3001D49EB /* MainViewModel.swift */; };
+		C42DF0602A371C31001D49EB /* RealmDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DF05F2A371C31001D49EB /* RealmDBModel.swift */; };
 		EB6D39AE277956C3000A91DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39AD277956C3000A91DD /* AppDelegate.swift */; };
 		EB6D39B0277956C3000A91DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39AF277956C3000A91DD /* SceneDelegate.swift */; };
 		EB6D39B2277956C3000A91DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39B1277956C3000A91DD /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C42DF05D2A371BB3001D49EB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		C42DF05F2A371C31001D49EB /* RealmDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDBModel.swift; sourceTree = "<group>"; };
 		EB6D39AA277956C3000A91DD /* DatabaseRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatabaseRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6D39AD277956C3000A91DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB6D39AF277956C3000A91DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C42DF05A2A371B6C001D49EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB6D39C627795D43000A91DD /* Memo.swift */,
+				C42DF05F2A371C31001D49EB /* RealmDBModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C42DF05B2A371B83001D49EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB6D39B3277956C3000A91DD /* Main.storyboard */,
+				EB6D39B1277956C3000A91DD /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C42DF05C2A371B8E001D49EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C42DF05D2A371BB3001D49EB /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EB6D39A1277956C3000A91DD = {
 			isa = PBXGroup;
 			children = (
@@ -64,12 +94,12 @@
 			children = (
 				EB6D39AD277956C3000A91DD /* AppDelegate.swift */,
 				EB6D39AF277956C3000A91DD /* SceneDelegate.swift */,
-				EB6D39B1277956C3000A91DD /* ViewController.swift */,
-				EB6D39B3277956C3000A91DD /* Main.storyboard */,
+				C42DF05C2A371B8E001D49EB /* ViewModel */,
+				C42DF05B2A371B83001D49EB /* View */,
+				C42DF05A2A371B6C001D49EB /* Model */,
 				EB6D39B6277956C5000A91DD /* Assets.xcassets */,
 				EB6D39B8277956C5000A91DD /* LaunchScreen.storyboard */,
 				EB6D39BB277956C6000A91DD /* Info.plist */,
-				EB6D39C627795D43000A91DD /* Memo.swift */,
 			);
 			path = DatabaseRealm;
 			sourceTree = "<group>";
@@ -152,8 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42DF05E2A371BB3001D49EB /* MainViewModel.swift in Sources */,
 				EB6D39B2277956C3000A91DD /* ViewController.swift in Sources */,
 				EB6D39AE277956C3000A91DD /* AppDelegate.swift in Sources */,
+				C42DF0602A371C31001D49EB /* RealmDBModel.swift in Sources */,
 				EB6D39B0277956C3000A91DD /* SceneDelegate.swift in Sources */,
 				EB6D39C727795D43000A91DD /* Memo.swift in Sources */,
 			);
