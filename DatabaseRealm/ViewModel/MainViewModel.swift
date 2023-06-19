@@ -7,31 +7,9 @@
 
 import RealmSwift
 
-class MainViewModel{
+protocol MainViewModel{
     
+    func loadData() -> List<Memo>
     
-    private let realmDBModel : RealmDBModel
-
-    init(realmDBModel:RealmDBModel = RealmDBModel()) {
-        self.realmDBModel = realmDBModel
-    }
-    
-    public var tableData : Results<Memo>? = nil
-    
-    func loadData(){
-        tableData = realmDBModel.readAll()
-    }
-    
-    func create(title:String , content:String , sucsess:() -> Void,failed:() -> Void ){
-        realmDBModel.create(
-            title: title,
-            content: content,
-            sucsess: {
-                sucsess()
-            },
-            failed: {
-                failed()
-            }
-        )
-    }
+    func create(memo:Memo, sucsess:(_ text:String) -> Void,failed:(_ text:String) -> Void )
 }

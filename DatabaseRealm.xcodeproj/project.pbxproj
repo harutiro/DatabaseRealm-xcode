@@ -10,12 +10,13 @@
 		00A9861BFE53FA09B65DC991 /* Pods_DatabaseRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F66430699DEE804193B689 /* Pods_DatabaseRealm.framework */; };
 		363D2F24991A3B26400F4319 /* Pods_DatabaseRealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ED3A255B7A120B704EC86E /* Pods_DatabaseRealmTests.framework */; };
 		C42DF05E2A371BB3001D49EB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DF05D2A371BB3001D49EB /* MainViewModel.swift */; };
-		C42DF0602A371C31001D49EB /* RealmDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DF05F2A371C31001D49EB /* RealmDBModel.swift */; };
+		C42DF0602A371C31001D49EB /* MemoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DF05F2A371C31001D49EB /* MemoRepository.swift */; };
+		C467B0162A3C2CBD00CE0438 /* MemoRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C467B0152A3C2CBD00CE0438 /* MemoRepositoryImpl.swift */; };
+		C467B0182A3C2F5B00CE0438 /* MainViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C467B0172A3C2F5B00CE0438 /* MainViewModelImpl.swift */; };
 		C4E267142A3748C2005C039E /* DatabaseRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E267132A3748C2005C039E /* DatabaseRealmTests.swift */; };
 		C4EF46D02A374D6900D4E9DE /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF46CF2A374D6900D4E9DE /* GeneratedMocks.swift */; };
 		C4EF46D32A37605700D4E9DE /* MainViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF46D22A37605700D4E9DE /* MainViewModelTest.swift */; };
 		C4EF46D52A37625100D4E9DE /* MemoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF46D42A37625100D4E9DE /* MemoStruct.swift */; };
-		C4EF46D62A3762D200D4E9DE /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39C627795D43000A91DD /* Memo.swift */; };
 		EB6D39AE277956C3000A91DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39AD277956C3000A91DD /* AppDelegate.swift */; };
 		EB6D39B0277956C3000A91DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39AF277956C3000A91DD /* SceneDelegate.swift */; };
 		EB6D39B2277956C3000A91DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D39B1277956C3000A91DD /* ViewController.swift */; };
@@ -41,7 +42,9 @@
 		B0621577A76ABA39A5E3B562 /* Pods-DatabaseRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseRealm.debug.xcconfig"; path = "Target Support Files/Pods-DatabaseRealm/Pods-DatabaseRealm.debug.xcconfig"; sourceTree = "<group>"; };
 		B0F66430699DEE804193B689 /* Pods_DatabaseRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42DF05D2A371BB3001D49EB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		C42DF05F2A371C31001D49EB /* RealmDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDBModel.swift; sourceTree = "<group>"; };
+		C42DF05F2A371C31001D49EB /* MemoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRepository.swift; sourceTree = "<group>"; };
+		C467B0152A3C2CBD00CE0438 /* MemoRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRepositoryImpl.swift; sourceTree = "<group>"; };
+		C467B0172A3C2F5B00CE0438 /* MainViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelImpl.swift; sourceTree = "<group>"; };
 		C4E267112A3748C2005C039E /* DatabaseRealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatabaseRealmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E267132A3748C2005C039E /* DatabaseRealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRealmTests.swift; sourceTree = "<group>"; };
 		C4EF46CF2A374D6900D4E9DE /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
@@ -95,7 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				EB6D39C627795D43000A91DD /* Memo.swift */,
-				C42DF05F2A371C31001D49EB /* RealmDBModel.swift */,
+				C42DF05F2A371C31001D49EB /* MemoRepository.swift */,
+				C467B0152A3C2CBD00CE0438 /* MemoRepositoryImpl.swift */,
 				C4EF46D42A37625100D4E9DE /* MemoStruct.swift */,
 			);
 			path = Model;
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C42DF05D2A371BB3001D49EB /* MainViewModel.swift */,
+				C467B0172A3C2F5B00CE0438 /* MainViewModelImpl.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -344,7 +349,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Define output file. Change \"$PROJECT_DIR/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Model/RealmDBModel.swift\" \\\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Define output file. Change \"$PROJECT_DIR/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Model/MemoRepository.swift\" \\\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 		E97AA328DFF5C2B3C72E5817 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -390,7 +395,6 @@
 				C4E267142A3748C2005C039E /* DatabaseRealmTests.swift in Sources */,
 				C4EF46D32A37605700D4E9DE /* MainViewModelTest.swift in Sources */,
 				C4EF46D02A374D6900D4E9DE /* GeneratedMocks.swift in Sources */,
-				C4EF46D62A3762D200D4E9DE /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,8 +405,10 @@
 				C42DF05E2A371BB3001D49EB /* MainViewModel.swift in Sources */,
 				EB6D39B2277956C3000A91DD /* ViewController.swift in Sources */,
 				EB6D39AE277956C3000A91DD /* AppDelegate.swift in Sources */,
-				C42DF0602A371C31001D49EB /* RealmDBModel.swift in Sources */,
+				C467B0162A3C2CBD00CE0438 /* MemoRepositoryImpl.swift in Sources */,
+				C42DF0602A371C31001D49EB /* MemoRepository.swift in Sources */,
 				EB6D39B0277956C3000A91DD /* SceneDelegate.swift in Sources */,
+				C467B0182A3C2F5B00CE0438 /* MainViewModelImpl.swift in Sources */,
 				EB6D39C727795D43000A91DD /* Memo.swift in Sources */,
 				C4EF46D52A37625100D4E9DE /* MemoStruct.swift in Sources */,
 			);

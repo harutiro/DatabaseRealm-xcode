@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: DatabaseRealm/Model/RealmDBModel.swift at 2023-06-12 14:21:11 +0000
+// MARK: - Mocks generated from file: DatabaseRealm/Model/MemoRepository.swift at 2023-06-19 11:07:29 +0000
 
 //
 //  RealmDBModel.swift
@@ -17,19 +17,19 @@ import RealmSwift
 
 
 
- class MockRealmDBModel: RealmDBModel, Cuckoo.ClassMock {
+ class MockMemoRepository: MemoRepository, Cuckoo.ProtocolMock {
     
-     typealias MocksType = RealmDBModel
+     typealias MocksType = MemoRepository
     
-     typealias Stubbing = __StubbingProxy_RealmDBModel
-     typealias Verification = __VerificationProxy_RealmDBModel
+     typealias Stubbing = __StubbingProxy_MemoRepository
+     typealias Verification = __VerificationProxy_MemoRepository
 
-     let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: true)
+     let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
 
     
-    private var __defaultImplStub: RealmDBModel?
+    private var __defaultImplStub: MemoRepository?
 
-     func enableDefaultImplementation(_ stub: RealmDBModel) {
+     func enableDefaultImplementation(_ stub: MemoRepository) {
         __defaultImplStub = stub
         cuckoo_manager.enableDefaultStubImplementation()
     }
@@ -43,7 +43,7 @@ import RealmSwift
     
     
     
-     override func read() -> Memo? {
+     func read() -> Memo? {
         
     return cuckoo_manager.call(
     """
@@ -53,7 +53,7 @@ import RealmSwift
             escapingParameters: (),
             superclassCall:
                 
-                super.read()
+                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
                 ,
             defaultCall: __defaultImplStub!.read())
         
@@ -63,17 +63,17 @@ import RealmSwift
     
     
     
-     override func readAll() -> Results<Memo> {
+     func readAll() -> List<Memo> {
         
     return cuckoo_manager.call(
     """
-    readAll() -> Results<Memo>
+    readAll() -> List<Memo>
     """,
             parameters: (),
             escapingParameters: (),
             superclassCall:
                 
-                super.readAll()
+                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
                 ,
             defaultCall: __defaultImplStub!.readAll())
         
@@ -83,29 +83,29 @@ import RealmSwift
     
     
     
-     override func create(title: String, content: String, sucsess: () -> Void, failed: () -> Void)  {
-        		return withoutActuallyEscaping(sucsess, do: { (sucsess: @escaping () -> Void) -> Void in
-			return withoutActuallyEscaping(failed, do: { (failed: @escaping () -> Void) -> Void in
+     func create(memo: Memo, sucsess: () -> Void, failed: () -> Void)  {
+        	return withoutActuallyEscaping(sucsess, do: { (sucsess: @escaping () -> Void) -> Void in
+		return withoutActuallyEscaping(failed, do: { (failed: @escaping () -> Void) -> Void in
 
     return cuckoo_manager.call(
     """
-    create(title: String, content: String, sucsess: () -> Void, failed: () -> Void)
+    create(memo: Memo, sucsess: () -> Void, failed: () -> Void)
     """,
-            parameters: (title, content, sucsess, failed),
-            escapingParameters: (title, content, { () in fatalError("This is a stub! It's not supposed to be called!") }, { () in fatalError("This is a stub! It's not supposed to be called!") }),
+            parameters: (memo, sucsess, failed),
+            escapingParameters: (memo, { () in fatalError("This is a stub! It's not supposed to be called!") }, { () in fatalError("This is a stub! It's not supposed to be called!") }),
             superclassCall:
                 
-                super.create(title: title, content: content, sucsess: sucsess, failed: failed)
+                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
                 ,
-            defaultCall: __defaultImplStub!.create(title: title, content: content, sucsess: sucsess, failed: failed))
-        		})
-			})
+            defaultCall: __defaultImplStub!.create(memo: memo, sucsess: sucsess, failed: failed))
+        	})
+		})
 
     }
     
     
 
-     struct __StubbingProxy_RealmDBModel: Cuckoo.StubbingProxy {
+     struct __StubbingProxy_MemoRepository: Cuckoo.StubbingProxy {
         private let cuckoo_manager: Cuckoo.MockManager
     
          init(manager: Cuckoo.MockManager) {
@@ -115,9 +115,9 @@ import RealmSwift
         
         
         
-        func read() -> Cuckoo.ClassStubFunction<(), Memo?> {
+        func read() -> Cuckoo.ProtocolStubFunction<(), Memo?> {
             let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-            return .init(stub: cuckoo_manager.createStub(for: MockRealmDBModel.self, method:
+            return .init(stub: cuckoo_manager.createStub(for: MockMemoRepository.self, method:
     """
     read() -> Memo?
     """, parameterMatchers: matchers))
@@ -126,29 +126,29 @@ import RealmSwift
         
         
         
-        func readAll() -> Cuckoo.ClassStubFunction<(), Results<Memo>> {
+        func readAll() -> Cuckoo.ProtocolStubFunction<(), List<Memo>> {
             let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-            return .init(stub: cuckoo_manager.createStub(for: MockRealmDBModel.self, method:
+            return .init(stub: cuckoo_manager.createStub(for: MockMemoRepository.self, method:
     """
-    readAll() -> Results<Memo>
+    readAll() -> List<Memo>
     """, parameterMatchers: matchers))
         }
         
         
         
         
-        func create<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable, M4: Cuckoo.Matchable>(title: M1, content: M2, sucsess: M3, failed: M4) -> Cuckoo.ClassStubNoReturnFunction<(String, String, () -> Void, () -> Void)> where M1.MatchedType == String, M2.MatchedType == String, M3.MatchedType == () -> Void, M4.MatchedType == () -> Void {
-            let matchers: [Cuckoo.ParameterMatcher<(String, String, () -> Void, () -> Void)>] = [wrap(matchable: title) { $0.0 }, wrap(matchable: content) { $0.1 }, wrap(matchable: sucsess) { $0.2 }, wrap(matchable: failed) { $0.3 }]
-            return .init(stub: cuckoo_manager.createStub(for: MockRealmDBModel.self, method:
+        func create<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable>(memo: M1, sucsess: M2, failed: M3) -> Cuckoo.ProtocolStubNoReturnFunction<(Memo, () -> Void, () -> Void)> where M1.MatchedType == Memo, M2.MatchedType == () -> Void, M3.MatchedType == () -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(Memo, () -> Void, () -> Void)>] = [wrap(matchable: memo) { $0.0 }, wrap(matchable: sucsess) { $0.1 }, wrap(matchable: failed) { $0.2 }]
+            return .init(stub: cuckoo_manager.createStub(for: MockMemoRepository.self, method:
     """
-    create(title: String, content: String, sucsess: () -> Void, failed: () -> Void)
+    create(memo: Memo, sucsess: () -> Void, failed: () -> Void)
     """, parameterMatchers: matchers))
         }
         
         
     }
 
-     struct __VerificationProxy_RealmDBModel: Cuckoo.VerificationProxy {
+     struct __VerificationProxy_MemoRepository: Cuckoo.VerificationProxy {
         private let cuckoo_manager: Cuckoo.MockManager
         private let callMatcher: Cuckoo.CallMatcher
         private let sourceLocation: Cuckoo.SourceLocation
@@ -177,11 +177,11 @@ import RealmSwift
         
         
         @discardableResult
-        func readAll() -> Cuckoo.__DoNotUse<(), Results<Memo>> {
+        func readAll() -> Cuckoo.__DoNotUse<(), List<Memo>> {
             let matchers: [Cuckoo.ParameterMatcher<Void>] = []
             return cuckoo_manager.verify(
     """
-    readAll() -> Results<Memo>
+    readAll() -> List<Memo>
     """, callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
         
@@ -189,11 +189,11 @@ import RealmSwift
         
         
         @discardableResult
-        func create<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable, M4: Cuckoo.Matchable>(title: M1, content: M2, sucsess: M3, failed: M4) -> Cuckoo.__DoNotUse<(String, String, () -> Void, () -> Void), Void> where M1.MatchedType == String, M2.MatchedType == String, M3.MatchedType == () -> Void, M4.MatchedType == () -> Void {
-            let matchers: [Cuckoo.ParameterMatcher<(String, String, () -> Void, () -> Void)>] = [wrap(matchable: title) { $0.0 }, wrap(matchable: content) { $0.1 }, wrap(matchable: sucsess) { $0.2 }, wrap(matchable: failed) { $0.3 }]
+        func create<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable, M3: Cuckoo.Matchable>(memo: M1, sucsess: M2, failed: M3) -> Cuckoo.__DoNotUse<(Memo, () -> Void, () -> Void), Void> where M1.MatchedType == Memo, M2.MatchedType == () -> Void, M3.MatchedType == () -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(Memo, () -> Void, () -> Void)>] = [wrap(matchable: memo) { $0.0 }, wrap(matchable: sucsess) { $0.1 }, wrap(matchable: failed) { $0.2 }]
             return cuckoo_manager.verify(
     """
-    create(title: String, content: String, sucsess: () -> Void, failed: () -> Void)
+    create(memo: Memo, sucsess: () -> Void, failed: () -> Void)
     """, callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
         
@@ -202,7 +202,7 @@ import RealmSwift
 }
 
 
- class RealmDBModelStub: RealmDBModel {
+ class MemoRepositoryStub: MemoRepository {
     
 
     
@@ -211,7 +211,7 @@ import RealmSwift
     
     
     
-     override func read() -> Memo?  {
+     func read() -> Memo?  {
         return DefaultValueRegistry.defaultValue(for: (Memo?).self)
     }
     
@@ -219,15 +219,15 @@ import RealmSwift
     
     
     
-     override func readAll() -> Results<Memo>  {
-        return DefaultValueRegistry.defaultValue(for: (Results<Memo>).self)
+     func readAll() -> List<Memo>  {
+        return DefaultValueRegistry.defaultValue(for: (List<Memo>).self)
     }
     
     
     
     
     
-     override func create(title: String, content: String, sucsess: () -> Void, failed: () -> Void)   {
+     func create(memo: Memo, sucsess: () -> Void, failed: () -> Void)   {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
